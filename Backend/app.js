@@ -24,21 +24,19 @@ app.get("/", (req, res) => {
 // =========================
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://bloodbridge-taupe.vercel.app",
+  "https://blood-bridge-taupe.vercel.app", // <-- match your real Vercel URL exactly
 ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow Postman, mobile apps, etc.
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      return callback(new Error("Not allowed by CORS"));
-    },
+  if (!origin) return callback(null, true);
+  if (allowedOrigins.includes(origin)) {
+    return callback(null, true);
+  }
+  console.warn("Blocked by CORS, origin was:", origin); // helpful for debugging
+  return callback(new Error("Not allowed by CORS"));
+},
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
