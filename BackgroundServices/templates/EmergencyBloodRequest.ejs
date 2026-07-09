@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <body style="margin:0;background:#f8fafc;font-family:Arial,sans-serif;color:#0f172a">
+    <div style="max-width:620px;margin:30px auto;background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0">
+      <div style="background:#881337;color:#fff;padding:28px">
+        <p style="margin:0;font-size:13px;font-weight:bold;text-transform:uppercase">BloodBridge emergency alert</p>
+        <h1 style="margin:10px 0 0"><%= bloodgroup %> blood required</h1>
+      </div>
+      <div style="padding:28px">
+        <p>A hospital has published a <strong><%= urgency %></strong> blood request.</p>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:10px 0;color:#64748b">Patient</td><td style="padding:10px 0;font-weight:bold"><%= patientName %></td></tr>
+          <tr><td style="padding:10px 0;color:#64748b">Hospital</td><td style="padding:10px 0;font-weight:bold"><%= hospital %></td></tr>
+          <tr><td style="padding:10px 0;color:#64748b">Units required</td><td style="padding:10px 0;font-weight:bold"><%= unitsRequired %></td></tr>
+          <tr><td style="padding:10px 0;color:#64748b">Required date</td><td style="padding:10px 0;font-weight:bold"><%= date %></td></tr>
+          <tr><td style="padding:10px 0;color:#64748b">Contact</td><td style="padding:10px 0;font-weight:bold"><%= contactNumber %></td></tr>
+        </table>
+        <p style="margin-top:24px">Contact the hospital directly before travelling. Donation eligibility must be confirmed by medical staff.</p>
+      </div>
+    </div>
+  </body>
+</html>
