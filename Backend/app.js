@@ -13,7 +13,12 @@ const emergencyRoute = require("./routes/emergency");
 dotenv.config();
 
 const app = express();
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "BloodBridge Backend is running",
+    version: "NEW_DEPLOYMENT",
+  });
+});
 // =========================
 // CORS
 // =========================
