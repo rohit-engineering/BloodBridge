@@ -24,6 +24,8 @@ app.get("/", (req, res) => {
 // =========================
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://blood-bridge-gsfkvov7y-rohits-projects-e5c27de7.vercel.app",
+  "https://blood-bridge-git-main-rohits-projects-e5c27de7.vercel.app/",
   "https://blood-bridge-taupe.vercel.app", // <-- match your real Vercel URL exactly
 ];
 
